@@ -400,61 +400,52 @@ table {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 nav {
-    background-image: linear-gradient(to top right, #e368f3, #591f74);
-    height: 20%;
-    width: 100%;
-    position: static;
+  z-index: 3;
+  display: flex;
+  justify-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-image: linear-gradient(to top right, #e368f3, #591f74);
+  position: sticky;
+  top: 0px;
 }
 
 .logo {
     width: 150px;
-    height: 100px;
+    height: 90px;
 }
 
-.navegation {
-    display: flex;
-    display: inline;
-    justify-content: space-between;
-    width: 70%;
-    height: 50%;
-    margin-bottom: 0px;
-}
-
-/*bg*/
-/*txt*/
-/*success*/
 .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    top: 20px;
-    left: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: inline-block;
+  top: 20px;
+  left: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
-  .buttons button {
-    width: 150px;
-    height: 50px;
-    background-color: white;
-    margin: 20px;
-    color: #5f3f7c;
-    position: relative;
-    overflow: hidden;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
+.buttons button {
+  background-color: #d069ff00;
+  width: 150px;
+  height: 50px;
+  margin: 20px;
+  color: #5f3f7c;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
   }
   
-  .buttons button:before, .buttons button:after {
+.buttons button:before, .buttons button:after {
     content: "";
     position: absolute;
     width: 0;
@@ -490,7 +481,7 @@ nav {
     position: absolute;
     width: 2px;
     height: 0;
-    background-color: #f185ff;
+    background-color: #e368f3;
     transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
   }
   
@@ -531,7 +522,7 @@ nav {
   .buttons button p:after {
     content: attr(data-text);
     top: 150%;
-    color: #ec41d5;
+    color: #e368f3;
   }
   
   .buttons button:hover:before, .buttons button:hover:after {
@@ -612,7 +603,7 @@ nav {
     transition: 0.5s;
     animation: gradient_301 5s ease infinite;
     border: double 4px transparent;
-    background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+    background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #591463 10%,#FE53BB 45%, #8F51EA 67%, #5deef8 87%);
     background-origin: border-box;
     background-clip: content-box, border-box;
   }
@@ -661,7 +652,7 @@ nav {
   
   .btn:hover #container-stars {
     z-index: 1;
-    background-color: #212121;
+    background-color: #490e49;
   }
   
   .btn:hover {
@@ -782,6 +773,7 @@ nav {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 1;
 }
 
 .custom-shape-divider-bottom-1678738159 svg {
@@ -792,17 +784,127 @@ nav {
 }
 
 .custom-shape-divider-bottom-1678738159 .shape-fill {
-    fill: #ffffff;
+  fill: #ffffff;
 }
 
 
+.home {
+  display: flex;
+  justify-content: center;
+
+}
+
+.fisrtImage {
+  width: 20%;
+  height: 10%;
+  padding: 0;
+  margin: 0;
 
 
+}
 
+.homeConteiner {
+display: flex;
+align-items: center;
+flex-direction: column;
+margin-top: 50px;
+max-width: 80%;
+}
 
+.homeContent {
+margin-top: 5%;
+  margin-left: 20%;
+display: flex;
+flex-direction: column;
+text-align: center;
+color: #ffffff;
+}
 
+.btnHome {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-top: 10%;
+  margin-left: 30%;
+  width: 60%;
+  justify-content: space-between;
+}
 
+h2 {
+  font-weight: bolder;
+}
 
+.cardTypeGame {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
 
+.cardsType1{
+width: 25%;
+height: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bolder;
+font-size: larger;
+background-image: url(imagens/survivalcard.png);
+color: #ffffff;
+}
 
+.cardsType1:hover {
+  border: 3px solid #ff03ff3d;
+}
 
+.cardsType2{
+  width: 25%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: larger;
+  background-image: url(imagens/battleroyalecard.jpg);
+  color: #ffffff;
+}
+
+.cardsType2:hover {
+  border: 3px solid #ff03ff3d;
+}
+
+.cardsType3{
+    width: 25%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: larger;
+    background-image: url(imagens/actioncard.jpg);
+    color: #ffffff;
+}
+
+.cardsType3:hover {
+  border: 3px solid #ff03ff3d;
+}
+
+.aboutUs {
+  background-color: #5deef8;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+ .textAbout {
+  background-color: #212121;
+  max-width: 30%;
+  height: 15%;
+}
+    
+animation {
+  width: 100px;
+  height: 90px;
+}
