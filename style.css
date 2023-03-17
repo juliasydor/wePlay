@@ -243,9 +243,7 @@ table {
   button,
   [type="button"],
   [type="reset"],
-  [type="submit"] {
-    -webkit-appearance: button;
-  }
+  [type="submit"] 
   
   /**
    * Remove the inner border and padding in Firefox.
@@ -336,7 +334,6 @@ table {
    */
   
   [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
   }
   
@@ -398,6 +395,10 @@ table {
 
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin: 0;
 }
 
 
@@ -892,14 +893,13 @@ color: #ffffff;
 }
 
 .aboutUs {
-  background-color: #5deef8;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
 }
 
  .textAbout {
-  background-color: #212121;
+  background-color: #9e8484;
   max-width: 30%;
   height: 15%;
 }
@@ -907,4 +907,198 @@ color: #ffffff;
 animation {
   width: 100px;
   height: 90px;
+}
+
+.games {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.card {
+  width: 190px;
+  height: 255px;
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(163deg, #25ffd0 0%, #7712ca 100%);
+  border-radius: 20px;
+  transition: all .3s;
+ }
+ 
+ .card2 {
+  width: 190px;
+  height: 254px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  transition: all .2s;
+ }
+ 
+ .card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+ }
+ 
+ .card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+ }
+
+
+
+ .plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+ }
+
+.planUser {
+  display: flex;
+  justify-content: space-between;
+}
+
+ .plans1 {
+  width: 195px;
+  height: 285px;
+  background-image: url(imagens/gold.png);
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease-in-out;
+}
+
+.plans2 {
+  width: 195px;
+  height: 285px;
+  background-image: url(imagens/luxury.png);
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease-in-out;
+}
+
+.plans3 {
+  width: 195px;
+  height: 285px;
+  background-image: url(imagens/diamond.png);
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease-in-out;
+}
+
+.img {
+  height: 50%;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.textBox {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.textBox > .text {
+  font-weight: bold;
+}
+
+.textBox > .head {
+  font-size: 20px;
+}
+
+.textBox > .price {
+  font-size: 17px;
+}
+
+.textBox > span {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.507);
+}
+
+.plans1:hover > .textBox {
+  opacity: 1;
+}
+
+.plans2:hover > .textBox {
+  opacity: 1;
+}
+
+.plans3:hover > .textBox {
+  opacity: 1;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.plans1:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+.plans2:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+ 
+.plans3:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+ footer {
+  background-image: linear-gradient(to top right, #e368f3, #591f74);
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+ footer img {
+  width: 150px;
+  height: 90px;
+ }
+
+footer p {
+  font-weight: bolder;
+}
+
+ footer button {
+  font-size: 20px;
+  background-image: linear-gradient(180deg, #b350ec 0%, #7d0ed8 100%);
+  color: black;
+  width: 50px;
+  height: 50px;
+  opacity: 0.75;
+  border: 1px solid #b35dfa;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: bounce_513 1s infinite;
+}
+
+@keyframes bounce_513 {
+  0%,
+    100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
