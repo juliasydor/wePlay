@@ -403,7 +403,7 @@ h1 {
 
 
 nav {
-  z-index: 3;
+  z-index: 100;
   display: flex;
   justify-items: center;
   align-items: flex-end;
@@ -842,11 +842,12 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  margin: 50px 0px 120px 0px;
 }
 
 .cardsType1{
 width: 25%;
-height: 70%;
+height: 80%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -854,15 +855,17 @@ font-weight: bolder;
 font-size: larger;
 background-image: url(imagens/survivalcard.png);
 color: #ffffff;
+border-radius: 5px;
 }
 
 .cardsType1:hover {
-  border: 3px solid #ff03ff3d;
+  border: 3px solid #ff7fd965;
+  box-shadow: 0px 0px 30px 1px rgba(236, 13, 188, 0.479);
 }
 
 .cardsType2{
   width: 25%;
-  height: 70%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -870,15 +873,17 @@ color: #ffffff;
   font-size: larger;
   background-image: url(imagens/battleroyalecard.jpg);
   color: #ffffff;
+  border-radius: 5px;
 }
 
 .cardsType2:hover {
-  border: 3px solid #ff03ff3d;
+  border: 3px solid #03afff4b;
+  box-shadow: 0px 0px 30px 1px rgba(13, 221, 236, 0.459);
 }
 
 .cardsType3{
     width: 25%;
-    height: 70%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -886,104 +891,996 @@ color: #ffffff;
     font-size: larger;
     background-image: url(imagens/actioncard.jpg);
     color: #ffffff;
+    border-radius: 5px;
 }
 
 .cardsType3:hover {
   border: 3px solid #ff03ff3d;
+  box-shadow: 0px 0px 30px 1px rgba(210, 13, 236, 0.438);
 }
 
-.aboutUs {
+
+.aboutUsContainer {
   display: flex;
-  justify-content: space-around;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to top right, #e368f3, #591f74);
+}
+
+.aboutUsContainer img {
+  margin: 10%;
 }
 
  .textAbout {
-  background-color: #9e8484;
-  max-width: 30%;
   height: 15%;
+  max-width: 40%;
+  padding: 20px;
+  margin: 10%;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 25px;
+  text-align: center;
+}
+
+.textAbout p {
+  padding: 10%;
+  color: #00000071;
 }
     
-animation {
-  width: 100px;
-  height: 90px;
+article button {
+  position: relative;
+  left: 58%;
+  bottom: 170px;
 }
+
 
 .games {
   height: 600px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
+.games h1 {
+  position: relative;
+  top: -90px;
+}
 
-.card {
-  width: 190px;
-  height: 255px;
+.cardsGames {
   display: flex;
   flex-direction: row;
-  background-image: linear-gradient(163deg, #25ffd0 0%, #7712ca 100%);
-  border-radius: 20px;
-  transition: all .3s;
- }
- 
- .card2 {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+/*works janky on mobile :<*/
+.container {
+  position: relative;
   width: 190px;
   height: 254px;
-  border-radius: 10px;
-  background-color: #1a1a1a;
-  transition: all .2s;
- }
- 
- .card2:hover {
-  transform: scale(0.98);
+  transition: 200ms;
+  padding: 25px;
+}
+
+.container:active {
+  width: 180px;
+  height: 245px;
+}
+
+#card1 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 20px;
- }
- 
- .card:hover {
-  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
- }
+  transition: 700ms;
+  background-image: url(imagens/fortnite.jpg);
+  text-align: center;
+}
 
+#card2 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: 700ms;
+  background-image: url(imagens/minecraft.png);
+  text-align: center;
+}
 
+#card3 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: 700ms;
+  background-image: url(imagens/rainbow.png);
+  text-align: center;
+}
+
+#card4 {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: 700ms;
+  background-image: url(imagens/cod.png);
+  text-align: center;
+}
+
+.subtitle {
+  transform: translateY(160px);
+  color: rgb(134, 110, 221);
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  opacity: 0;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out-out;
+  transition-delay: 100ms;
+  position: absolute;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.tracker:hover ~ #card1 .title {
+  opacity: 1;
+}
+
+.tracker:hover ~ #card2 .title {
+  opacity: 1;
+}
+
+.tracker:hover ~ #card3 .title {
+  opacity: 1;
+}
+
+.tracker:hover ~ #card4 .title {
+  opacity: 1;
+}
+
+#prompt {
+  z-index: 20;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 300ms ease-in-out-out;
+  max-width: 110px;
+  color: rgb(255, 255, 255);
+}
+
+.tracker {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+}
+
+.tracker:hover {
+  cursor: pointer;
+}
+
+.tracker:hover ~ #card1 #prompt {
+  opacity: 0;
+}
+
+.tracker:hover ~ #card2 #prompt {
+  opacity: 0;
+}
+
+.tracker:hover ~ #card3 #prompt {
+  opacity: 0;
+}
+
+.tracker:hover ~ #card4 #prompt {
+  opacity: 0;
+}
+
+.tracker:hover ~ #card1 {
+  transition: 300ms;
+  filter: brightness(1.1);
+}
+
+.tracker:hover ~ #card2 {
+  transition: 300ms;
+  filter: brightness(1.1);
+}
+
+.tracker:hover ~ #card3 {
+  transition: 300ms;
+  filter: brightness(1.1);
+}
+
+.tracker:hover ~ #card4 {
+  transition: 300ms;
+  filter: brightness(1.1);
+}
+
+.container:hover #card1::before {
+  transition: 200ms;
+  content: '';
+  opacity: 80%;
+}
+
+.container:hover #card2::before {
+  transition: 200ms;
+  content: '';
+  opacity: 80%;
+}
+
+.container:hover #card3::before {
+  transition: 200ms;
+  content: '';
+  opacity: 80%;
+}
+
+.container:hover #card4::before {
+  transition: 200ms;
+  content: '';
+  opacity: 80%;
+}
+
+.canvas {
+  perspective: 800px;
+  inset: 0;
+  z-index: 2;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "tr-1 tr-2 tr-3 tr-4 tr-5"
+    "tr-6 tr-7 tr-8 tr-9 tr-10"
+    "tr-11 tr-12 tr-13 tr-14 tr-15"
+    "tr-16 tr-17 tr-18 tr-19 tr-20"
+    "tr-21 tr-22 tr-23 tr-24 tr-25";
+}
+
+#card1::before {
+  content: '';
+
+  filter: blur(2rem);
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 200ms;
+}
+
+#card2::before {
+  content: '';
+
+  filter: blur(2rem);
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 200ms;
+}
+
+#card3::before {
+  content: '';
+
+  filter: blur(2rem);
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 200ms;
+}
+
+#card4::before {
+  content: '';
+
+  filter: blur(2rem);
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 200ms;
+}
+
+.tr-1 {
+  grid-area: tr-1;
+}
+
+.tr-2 {
+  grid-area: tr-2;
+}
+
+.tr-3 {
+  grid-area: tr-3;
+}
+
+.tr-4 {
+  grid-area: tr-4;
+}
+
+.tr-5 {
+  grid-area: tr-5;
+}
+
+.tr-6 {
+  grid-area: tr-6;
+}
+
+.tr-7 {
+  grid-area: tr-7;
+}
+
+.tr-8 {
+  grid-area: tr-8;
+}
+
+.tr-9 {
+  grid-area: tr-9;
+}
+
+.tr-10 {
+  grid-area: tr-10;
+}
+
+.tr-11 {
+  grid-area: tr-11;
+}
+
+.tr-12 {
+  grid-area: tr-12;
+}
+
+.tr-13 {
+  grid-area: tr-13;
+}
+
+.tr-14 {
+  grid-area: tr-14;
+}
+
+.tr-15 {
+  grid-area: tr-15;
+}
+
+.tr-16 {
+  grid-area: tr-16;
+}
+
+.tr-17 {
+  grid-area: tr-17;
+}
+
+.tr-18 {
+  grid-area: tr-18;
+}
+
+.tr-19 {
+  grid-area: tr-19;
+}
+
+.tr-20 {
+  grid-area: tr-20;
+}
+
+.tr-21 {
+  grid-area: tr-21;
+}
+
+.tr-22 {
+  grid-area: tr-22;
+}
+
+.tr-23 {
+  grid-area: tr-23;
+}
+
+.tr-24 {
+  grid-area: tr-24;
+}
+
+.tr-25 {
+  grid-area: tr-25;
+}
+
+.tr-1:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-1:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-1:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-1:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-2:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-2:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-2:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-2:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-3:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-3:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-3:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-3:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-4:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-4:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-4:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-4:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-5:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-5:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-5:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-5:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-6:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-6:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-6:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-6:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-7:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-7:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-7:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-7:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-8:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-8:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-8:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-8:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-9:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-9:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-9:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-9:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-10:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-10:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-10:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-10:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-11:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-11:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-11:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-11:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-12:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-12:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-12:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-12:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-13:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-13:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-13:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-13:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-14:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-14:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-14:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-14:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-15:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-15:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-15:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-15:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-16:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-16:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-16:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-16:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-17:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-17:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-17:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-17:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-18:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-18:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-18:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-18:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-19:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-19:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-19:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-19:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-20:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-20:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-20:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-20:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-21:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-21:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-21:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-21:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
+}
+
+.tr-22:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-22:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-22:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-22:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
+}
+
+.tr-23:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-23:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-23:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-23:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.tr-24:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-24:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-24:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-24:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
+}
+
+.tr-25:hover ~ #card1 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-25:hover ~ #card2 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-25:hover ~ #card3 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.tr-25:hover ~ #card4 {
+  transition: 125ms ease-in-out;
+  transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+   /* iOS Safari */
+  -webkit-user-select: none;
+   /* Safari */
+   /* Konqueror HTML */
+  -moz-user-select: none;
+   /* Old versions of Firefox */
+  -ms-user-select: none;
+   /* Internet Explorer/Edge */
+  user-select: none;
+   /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
 
  .plan {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   height: 400px;
+  margin: 0px 0px 100px 0;
+  border-top: 1px solid rgba(86, 8, 117, 0.288);
  }
 
-.planUser {
-  display: flex;
-  justify-content: space-between;
+article.plan h1 {
+  margin: 50px 0px 25px 0px;
 }
 
  .plans1 {
   width: 195px;
   height: 285px;
   background-image: url(imagens/gold.png);
-  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(0, 0, 0);
   transition: 0.2s ease-in-out;
+  border: 2px solid rgba(163, 11, 201, 0.342);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .plans2 {
   width: 195px;
   height: 285px;
   background-image: url(imagens/luxury.png);
-  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(0, 0, 0);
   transition: 0.2s ease-in-out;
+  border: 2px solid rgba(201, 11, 128, 0.336);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .plans3 {
   width: 195px;
   height: 285px;
   background-image: url(imagens/diamond.png);
-  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
   color: rgb(0, 0, 0);
   transition: 0.2s ease-in-out;
+  border: 2px solid rgba(72, 13, 139, 0.356);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
 }
 
 .img {
@@ -1006,31 +1903,39 @@ animation {
 
 .textBox > .text {
   font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .textBox > .head {
   font-size: 20px;
+  text-align: center;
 }
 
 .textBox > .price {
   font-size: 17px;
+  text-align: center;
 }
 
 .textBox > span {
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.507);
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
 .plans1:hover > .textBox {
-  opacity: 1;
+  opacity: 3;
 }
 
 .plans2:hover > .textBox {
-  opacity: 1;
+  opacity: 3;
 }
 
 .plans3:hover > .textBox {
-  opacity: 1;
+  opacity: 3;
 }
 
 @keyframes anim {
@@ -1061,7 +1966,7 @@ animation {
 
  footer {
   background-image: linear-gradient(to top right, #e368f3, #591f74);
-  height: 150px;
+  height: 140px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1101,4 +2006,8 @@ footer p {
     transform: translateY(0);
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+
+footer button p {
+  font-weight: lighter;
 }
