@@ -414,14 +414,12 @@ nav {
 }
 
 .logo {
-    width: 150px;
-    height: 90px;
+    width: 11%;
+    height: 6%;
 }
 
 .buttons {
   display: inline-block;
-  top: 20px;
-  left: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
@@ -2010,4 +2008,85 @@ footer p {
 
 footer button p {
   font-weight: lighter;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .logo {
+    width: 25%;
+    height: 15%;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .home {
+    position: relative;
+    background-image: linear-gradient(to bottom right, #e368f3, #591f74);
+    height: 70vh;
+    margin-top: 0px;
+  }
+
+  .homeConteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0%;
+  }
+
+  .homeContent p {
+    margin: 5px 0px;
+  }
+
+  .btn:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    margin: 0px 10px 0px 5px;
+  }
+
+  .textAbout {
+    text-align: justify;
+    max-width: 80%;
+    max-height: 30%;
+  }
+
+  article button {
+    position: relative;
+    left: 28%;
+    bottom: 80px;
+  }
+
+  .plan {
+    height: 50%;
+    text-align: center;
+  }
+
+  .planUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+    img {
+  display: none;
+  }
 }
