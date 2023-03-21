@@ -414,8 +414,8 @@ nav {
 }
 
 .logo {
-    width: 11%;
-    height: 6%;
+    width: 150px;
+    height: 100px;
 }
 
 .buttons {
@@ -759,7 +759,6 @@ nav {
   }
 
 .home {
-    position: relative;
     background-image: linear-gradient(to bottom right, #e368f3, #591f74);
     height: 80vh;
     margin-top: 0px;
@@ -790,7 +789,6 @@ nav {
 .home {
   display: flex;
   justify-content: center;
-
 }
 
 .fisrtImage {
@@ -799,20 +797,19 @@ nav {
   padding: 0;
   margin: 0;
 
-
 }
 
 .homeConteiner {
-display: flex;
-align-items: center;
-flex-direction: column;
-margin-top: 50px;
-max-width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  max-width: 80%;
 }
 
 .homeContent {
 margin-top: 5%;
-  margin-left: 20%;
+margin-left: 20%;
 display: flex;
 flex-direction: column;
 text-align: center;
@@ -2008,53 +2005,57 @@ footer p {
 
 footer button p {
   font-weight: lighter;
+  text-align: center;
 }
 
-@media only screen and (max-width: 350px) {
+.modal {
+  display: none;
+}
 
+@media only screen and (max-width: 700px) {
+  
   .logo {
     width: 25%;
-    height: 15%;
+    height: 30%;
   }
 
   nav {
     width: 100%;
   }
 
-  .home {
-    position: relative;
-    background-image: linear-gradient(to bottom right, #e368f3, #591f74);
-    height: 70vh;
-    margin-top: 0px;
+  nav .buttons {
+    display: none;
   }
 
-  .homeConteiner {
+
+  .home {
     display: flex;
     justify-content: center;
-    align-items: center;
+    background-image: linear-gradient(to bottom right, #e368f3, #591f74);
+    height: 60vh;
+    border-radius: 0px 0px 10px 10px;
   }
 
   .homeContent {
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0%;
+    margin: 50px;
   }
 
-  .homeContent p {
-    margin: 5px 0px;
-  }
-
-  .btn:hover {
+  .btnHome {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px 0px 0px 120px;
+    justify-content: space-between;
   }
   
   .btn {
-    width: 200px;
+    width: 250px;
     height: 50px;
     padding: 5px;
     margin: 0px 10px 0px 5px;
@@ -2068,12 +2069,12 @@ footer button p {
 
   article button {
     position: relative;
-    left: 28%;
+    left: 22%;
     bottom: 80px;
   }
 
   .plan {
-    height: 50%;
+    height: auto;
     text-align: center;
   }
 
@@ -2083,7 +2084,65 @@ footer button p {
     justify-content: center;
   }
 
-    img {
+  header img {
   display: none;
   }
+
+  .aboutUs img {
+    display: none;
+    }
+
+  .custom-shape-divider-bottom-1678738159 {
+    display: none;
+    }
+
+    footer {
+      height: 15vh;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+  header img {
+    display: none;
+  }
+
+  .aboutUs img {
+    display: none;
+  }
+
+  nav .buttons {
+    display: none;
+  }
+
+  .btnHome {
+    justify-content: space-between;
+  }
+
+  .textAbout {
+    text-align: justify;
+    max-width: 80%;
+    max-height: 30%;
+  }
+
+  article button {
+    position: relative;
+    bottom: 100px;
+  }
+
+  .plan {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+  article button {
+    position: relative;
+    bottom: 100px;
+  }
+
 }
